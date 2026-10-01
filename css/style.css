@@ -1,0 +1,84 @@
+:root {
+  --bg: #ffffff;
+  --text: #111111;
+  --muted: #6b6b6b;
+  --line: #111111;
+  --sky: #bfd9f2;
+
+  --merdeka: #b08d2e;
+  --sihadir: #f0607f;
+  --padasuka: #7a1428;
+  --dolce: #f28db2;
+  --quickmart: #2cb5a0;
+
+  --font-body: 'Inter', 'Segoe UI', Arial, sans-serif;
+  --font-display: 'Playfair Display', Georgia, serif;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { font-family: var(--font-body); background: var(--bg); color: var(--text); line-height: 1.6; }
+a { text-decoration: none; color: inherit; }
+.container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+
+/* Navbar */
+.navbar { display: flex; justify-content: space-between; align-items: center; padding: 18px 40px; background: #fff; position: sticky; top: 0; z-index: 10; border-bottom: 1px solid #eee; }
+.logo { font-family: var(--font-display); font-size: 1.5rem; font-weight: 800; }
+nav { display: flex; gap: 28px; }
+nav a { color: var(--muted); font-size: .8rem; font-weight: 500; letter-spacing: .12em; text-transform: uppercase; padding-bottom: 4px; border-bottom: 2px solid transparent; transition: .2s; }
+nav a:hover, nav a.active { color: var(--text); border-bottom-color: var(--text); }
+.menu-toggle { display: none; background: none; border: none; font-size: 1.6rem; cursor: pointer; }
+
+/* Hero */
+.hero { padding: 70px 0 50px; }
+.rule { display: flex; justify-content: space-between; border-top: 1px solid var(--line); padding-top: 10px; font-size: .7rem; letter-spacing: .2em; text-transform: uppercase; margin-bottom: 60px; }
+.hero h1 { font-size: clamp(2rem, 5vw, 3.2rem); line-height: 1.1; font-weight: 800; letter-spacing: -.02em; }
+.role { font-size: .75rem; font-weight: 600; letter-spacing: .2em; text-transform: uppercase; margin: 10px 0 20px; }
+.bio { max-width: 560px; color: var(--muted); font-size: .80rem;  }
+.hero-buttons { display: flex; gap: 14px; margin-top: 30px; flex-wrap: wrap; }
+
+/* Buttons */
+.btn { padding: 12px 26px; border-radius: 8px; font-weight: 600; font-size: .9rem; transition: .2s; display: inline-block; }
+.btn-primary { background: var(--text); color: #fff; border: 1px solid var(--text); }
+.btn-primary:hover { background: #fff; color: var(--text); }
+.btn-outline { border: 2px solid var(--text); color: var(--text); }
+.btn-outline:hover { background: var(--text); color: #fff; }
+
+/* Judul serif besar */
+.display { font-family: var(--font-display); font-weight: 800; text-align: center; line-height: 1; font-size: clamp(2rem, 6vw, 3.5rem); padding: 60px 0 50px; }
+.display small { display: inline-block; font-family: var(--font-body); font-size: .75rem; font-weight: 600; letter-spacing: .2em; background: var(--sky); padding: 3px 12px; margin: 8px 0; }
+
+/* Tag label kecil */
+.tag { display: inline-block; font-size: .99rem; font-weight: 700; letter-spacing: .15em; text-transform: uppercase;  color: #000000; padding: 4px; border-radius: 4px; margin-bottom: 0px; }
+
+/* Project cards */
+.project-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 28px; padding-bottom: 80px; }
+.project-card { display: block; border-radius: 16px; overflow: hidden; background: #fff; border: 1px solid #eee; transition: .25s; }
+.project-card:hover { transform: translateY(-6px); box-shadow: 0 14px 30px rgba(0, 0, 0, .12); }
+.project-card .cover { aspect-ratio: 16 / 9; background: linear-gradient(135deg, var(--c1), var(--c2)); }
+.project-card .cover img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.project-card .info { padding: 18px 20px 22px; border-top: 4px solid var(--c1); }
+.project-card h3 { font-family: var(--font-display); font-size: 1.4rem; margin-bottom: 4px; }
+.project-card p { color: var(--muted); font-size: .9rem; }
+
+/* Footer */
+footer { text-align: center; padding: 28px; color: var(--muted); font-size: .85rem; border-top: 1px solid #eee; }
+
+/* Responsive */
+@media (max-width: 768px) {
+  .navbar { padding: 16px 20px; }
+  .menu-toggle { display: block; }
+  nav { display: none; position: absolute; top: 100%; left: 0; right: 0; flex-direction: column; gap: 0; background: #fff; border-bottom: 1px solid #eee; }
+  nav.open { display: flex; }
+  nav a { padding: 14px 24px; border-bottom: none; }
+  .hero { padding-top: 40px; }
+  .rule { margin-bottom: 36px; }
+}
+
+.project-logo {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  border-radius: 6px;
+  flex-shrink: 0;
+}

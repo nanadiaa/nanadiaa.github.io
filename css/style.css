@@ -82,3 +82,51 @@ footer { text-align: center; padding: 28px; color: var(--muted); font-size: .85r
   border-radius: 6px;
   flex-shrink: 0;
 }
+
+/* Project modal */
+.modal-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,.6);
+  z-index: 100;
+  padding: 40px 20px;
+  overflow-y: auto;
+}
+.modal-overlay.open { display: block; }
+
+.modal-box {
+  background: #fff;
+  max-width: 800px;
+  margin: 0 auto;
+  border-radius: 16px;
+  padding: 30px;
+  position: relative;
+}
+
+.modal-close {
+  position: sticky;
+  top: 0;
+  float: right;
+  background: var(--text);
+  color: #fff;
+  border: none;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  font-size: 1rem;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.modal-title {
+  font-family: var(--font-display);
+  font-size: 1.6rem;
+  margin-bottom: 20px;
+  clear: both;
+}
+
+.modal-images { display: flex; flex-direction: column; gap: 14px; }
+.modal-images img { width: 100%; border-radius: 10px; display: block; }
+
+.project-card { cursor: pointer; }

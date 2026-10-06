@@ -27,53 +27,61 @@
 
     <div class="project-grid">
 
-      <a href="#" class="project-card" style="--c1:#b08d2e; --c2:#f3d98b">
+      <div class="project-card" style="--c1:#b08d2e; --c2:#f3d98b">
         <div class="cover"><img src="assets/img/merdeka.png" alt="Merdeka Inventory" onerror="this.remove()"></div>
         <div class="info">
           <span class="tag">Website</span>
           <h3>Merdeka Inventory</h3>
           <p>Inventory management system for Optik Merdeka.</p>
         </div>
-      </a>
+      </div>
 
-      <a href="#" class="project-card" style="--c1:#f0607f; --c2:#ffb07a">
+      <div class="project-card" style="--c1:#f0607f; --c2:#ffb07a">
         <div class="cover"><img src="assets/img/sihadir.png" alt="Si Hadir" onerror="this.remove()"></div>
         <div class="info">
           <span class="tag">Mobile</span>
           <h3>Si Hadir</h3>
           <p>Employee attendance and data management application.</p>
         </div>
-      </a>
+      </div>
 
-      <a href="#" class="project-card" style="--c1:#7a1428; --c2:#f2a65a">
+      <div class="project-card" style="--c1:#7a1428; --c2:#f2a65a">
         <div class="cover"><img src="assets/img/padasuka.png" alt="PADASUKA" onerror="this.remove()"></div>
         <div class="info">
           <span class="tag">Website</span>
           <h3>PADASUKA</h3>
           <p>Employee payroll and attendance website for Toko Kue PadaSuka.</p>
         </div>
-      </a>
+      </div>
 
-      <a href="#" class="project-card" style="--c1:#f28db2; --c2:#ffd6e5">
+      <div class="project-card" style="--c1:#f28db2; --c2:#ffd6e5">
         <div class="cover"><img src="assets/img/dolcebite.png" alt="Dolce Bite" onerror="this.remove()"></div>
         <div class="info">
           <span class="tag">Website</span>
           <h3>Dolce Bite</h3>
           <p>Cake ordering website.</p>
         </div>
-      </a>
+      </div>
 
-      <a href="#" class="project-card" style="--c1:#2cb5a0; --c2:#7ee0c3">
+      <div class="project-card" style="--c1:#2cb5a0; --c2:#7ee0c3">
         <div class="cover"><img src="assets/img/quickmart.png" alt="QuickMart" onerror="this.remove()"></div>
         <div class="info">
           <span class="tag">Mobile</span>
           <h3>QuickMart</h3>
           <p>E-commerce application.</p>
         </div>
-      </a>
+      </div>
 
     </div>
   </main>
+
+  <div class="modal-overlay" id="projectModal" onclick="if(event.target===this) closeProjectModal()">
+    <div class="modal-box">
+      <button class="modal-close" onclick="closeProjectModal()" aria-label="Close">✕</button>
+      <h3 id="modalTitle" class="modal-title"></h3>
+      <div id="modalImages" class="modal-images"></div>
+    </div>
+  </div>
 
   <footer>
     <p>&copy; <span class="year"></span> Nadia Umaira. All rights reserved.</p>

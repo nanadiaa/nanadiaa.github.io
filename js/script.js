@@ -10,6 +10,10 @@ const projectData = {
     images: [
       "assets/img/details/merdeka-1.png",
       "assets/img/details/merdeka-2.png",
+      "assets/img/details/merdeka-3.png",
+      "assets/img/details/merdeka-4.png",
+      "assets/img/details/merdeka-5.png",
+      "assets/img/details/merdeka-6.png",
     ]
   },
   sihadir: {
